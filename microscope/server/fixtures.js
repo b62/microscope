@@ -1,27 +1,23 @@
 /**
- * Created by mkundos on 9/14/2015.
+ * Created by mkundos on 9/17/2015.
  */
 
-var postsData = [
-    {
+if (Posts.find().count() === 0) {
+    Posts.insert({
         title: 'Introducing Telescope',
         author: 'Sacha Greif',
         url: 'http://sachagreif.com/introducing-telescope/'
-    },
-    {
-        title: 'Meteor',
+    });
+
+    Posts.insert({
+        title: 'Meteor 2',
         author: 'Tom Coleman',
         url: 'http://meteor.com'
-    },
-    {
+    });
+
+    Posts.insert({
         title: 'The Meteor Book',
         author: 'Tom Coleman',
         url: 'http://themeteorbook.com'
-    }
-];
-
-Template.postsList.helpers({
-    posts: function(){
-        return Posts.find();
-    }
-});
+    });
+}
