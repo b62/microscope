@@ -1,0 +1,15 @@
+<template name="layout">
+    <div class="container">
+        <header class="navbar">
+            <div class="navbar-inner">
+                <ul>
+                    <li><a href="">Home</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="main" class="row">
+            {{> yield }}
+        </div>
+    </div>
+</template>
